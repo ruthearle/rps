@@ -1,9 +1,28 @@
 require 'capybara'
 
-Given(/^I am on the homepage$/) do
-  ('/')
+When(/^I click "(.*?)"$/) do |arg1|
+  click_link arg1
+
 end
 
-When(/^I follow "(.*?)"$/) do |link|
-	click_on(link)
+When(/^I enter my name$/) do
+  fill_in "name", with: "Stephen"
+end
+
+Then(/^I should be ready to play$/) do
+  expect(page).to have_content("Welcome")
+end
+
+
+Given(/^I've registered to play$/) do
+  visit '/new-game'
+  click_button "Play!"
+end
+
+When(/^I choose Paper$/) do
+  click_button('Paper')
+end
+
+Then(/^I should be able to Play Again$/) do
+	click_button('Play Again')
 end

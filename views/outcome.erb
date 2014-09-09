@@ -1,0 +1,11 @@
+<h3>RESULTS</h3>
+
+<%if @game.winner == "Draw" %>
+	<h3>It was a draw!</h3>
+<%else%>
+	<h3><%=@game.message.first%></h3>
+<%end%>
+
+<form action="/play" method="POST">
+	<button>Play Again?</button>
+</form>

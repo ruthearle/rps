@@ -26,6 +26,6 @@ class Game
 	end
 
 	def message
-		@messages << "#{winner.name} beats #{loser.name} with #{winner.pick}!"
+		@messages << "#{winner.name.capitalize} beats #{loser.name.capitalize} with #{winner.pick}!"
 	end
 end
