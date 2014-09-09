@@ -7,8 +7,7 @@ Create a game of rock, paper, scissors that can be played in the browser using *
 ####Level One
 
 Use the code provided and create a **Sinata** based web app.
->I have added functionality to the existing code, which enables players to
-play a game of the 'best out of three' and the game will display the name of the
+>I have added functionality to the existing code tha will display the name of the
 both players and the winners pick.
 
 ####Level Two
