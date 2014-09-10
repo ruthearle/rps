@@ -13,16 +13,22 @@ Then(/^I should be ready to play$/) do
   expect(page).to have_content("Welcome")
 end
 
-
-Given(/^I've registered to play$/) do
-  visit '/new-game'
-  click_button "Play!"
+Then(/^I should be asked if I want to "(.*?)" or "(.*?)"$/) do |arg1, arg2|
+	visit '/new-game'
+	click_button arg1
+	click_button arg2
 end
 
-When(/^I choose Paper$/) do
-  click_button('Paper')
+Given(/^I click on "(.*?)"$/) do |arg1|
+	visit '/play'
 end
 
-Then(/^I should be able to Play Again$/) do
-	click_button('Play Again')
+
+When(/^I see RESULTS$/) do
+	visit '/outcome'
+
+end
+
+Then(/^I should be able to click "(.*?)" or click "(.*?)"$/) do |arg1, arg2|
+	visit '/outcome'
 end

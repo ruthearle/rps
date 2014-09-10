@@ -1,9 +1,10 @@
 <h2>Welcome</h2>
-<h3>Are you ready to play <%= @player %>?</h2>
+
+<h3>Are you ready to play <%= @player1 %>?</h2>
 
 <form action="/play" method="POST">
 	<button name="pick" value="Rock">Rock</button>
 	<button name="pick" value="Paper">Paper</button>
 	<button name="pick" value="Scissors">Scissors</button>
-	<input type="hidden" name="name" value="<%=@player%>">
+	<input type="hidden" name="name" value="<%=@player1%>">
 </form>
