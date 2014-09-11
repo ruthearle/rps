@@ -1,11 +1,12 @@
 <h3>RESULTS</h3>
 
-<h4><%= GAME.message.first%></h4>
+<h4><%= GAME.message.last%></h4>
 
 <form action="/play_again" method="POST">
 	<button>Play again?</button>
-	<input type="hidden" name="name" value="<%= GAME.players.first.name%>"></input>
+	<input type="hidden" name="name" value="<%= GAME.players.first.name %>"></input>
 </form>
 <form action="/new-game" method="GET">
-	<button>Play new game?</button>
+	<button<% GAME.messages.clear%>>Play new game?</button>
+
 </form>

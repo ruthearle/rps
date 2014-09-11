@@ -18,6 +18,8 @@ class RockPaperScissors < Sinatra::Base
 
   post '/register' do
     @player1 = params[:name]
+    GAME.player1= nil
+    GAME.player2= nil
     erb :play
   end
 
@@ -35,8 +37,8 @@ class RockPaperScissors < Sinatra::Base
   post '/play' do
     player = Player.new(params[:name])
     player.picks = params[:pick]
-    computer = generate_computer
     GAME.add_player(player)
+    computer = generate_computer
     GAME.add_player(computer)
     erb :outcome
   end

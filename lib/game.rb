@@ -15,10 +15,10 @@ class Game
 
 	BEATS = {rock: :scissors, scissors: :paper, paper: :rock}
 
-	attr_reader :player1, :player2
+	attr_accessor :player1, :player2, :messages	
 
 	def winner
-		return player1  if BEATS[normalize(player1.pick)] == normalize(player2.pick)
+		return player1 if BEATS[normalize(player1.pick)] == normalize(player2.pick)
 		player2
 	end
 
