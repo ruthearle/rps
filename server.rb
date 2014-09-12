@@ -3,6 +3,10 @@ require './lib/player'
 require './lib/game'
 
 class RockPaperScissors < Sinatra::Base
+configure :production do
+  require 'newrelic_rpm'
+end
+
 
   enable :sessions
   #set :views, Proc.new { File.join(root, "..", "views") }
