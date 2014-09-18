@@ -1,3 +1,4 @@
+
 require 'sinatra/base'
 require './lib/player'
 require './lib/game'
@@ -37,14 +38,19 @@ end
     @player1 = params[:name]
     erb :play
   end
-  
+
   post '/play' do
-    player = Player.new(params[:name])
-    player.picks = params[:pick]
-    GAME.add_player(player)
+    puts '====' * 27
+    puts params.inspect
+
+    @player = Player.new(params[:name])
+    @player.picks = params[:pick]
+    GAME.add_player(@player)
     computer = generate_computer
     GAME.add_player(computer)
-    erb :outcome
+    GAME.play
+    @messages = GAME.messages
+    erb :play
   end
 
 
