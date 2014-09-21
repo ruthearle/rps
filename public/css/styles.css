@@ -22,17 +22,17 @@ h4 {
   font-size: 80%;
 }
 
-input {
-  text-size: 100%;
-}
 
 #play-game {
   font-size: 80%;
 }
 
+#play-again {
+  font-size: 80&;
+}
+
 #paper-pick {
-  font-size:80%;
-  
+  font-size:80%;  
 }
 
 #scissors-pick {
