@@ -1,0 +1,44 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 400
+
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 1.3em
+}
+
+#new-game {
+  font-size: 80%;
+}
+
+input {
+  text-size: 100%;
+}
+
+#play-game {
+  font-size: 80%;
+}
+
+#paper-pick {
+  font-size:80%;
+  
+}
+
+#scissors-pick {
+  font-size: 80%;
+}
+
+#rock-pick {
+  font-size: 80;
+}
