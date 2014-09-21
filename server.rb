@@ -22,16 +22,21 @@ end
   end
 
   post '/register' do
-    @player1 = params[:name]
-    GAME.player1= nil
-    GAME.player2= nil
+    @player1 = Player.new(params[:name])
+    GAME.add_player1(@player1)
+    computer = generate_computer
+    GAME.add_player2(computer)
     erb :play
   end
 
-
-  post '/add_another_player' do
-    @player2 = params[:name]
-    erb :new_game
+  post '/play' do
+    @player1 = GAME.players.first
+    @player1.picks = params[:pick]
+    @player2 = GAME.players.last
+    @player2.picks = comp_choice
+    @messages = GAME.messages
+    GAME.play
+    erb :play
   end
 
   post '/play_again' do
@@ -39,28 +44,15 @@ end
     erb :play
   end
 
-  post '/play' do
-    puts '====' * 27
-    puts params.inspect
 
-    @player = Player.new(params[:name])
-    @player.picks = params[:pick]
-    GAME.add_player(@player)
-    computer = generate_computer
-    GAME.add_player(computer)
-    GAME.play
-    @messages = GAME.messages
-    erb :play
+  def generate_computer
+   comp = Player.new("computer")
+   comp
   end
 
-
-   def generate_computer
+  def comp_choice
     choice = ["Rock","Paper","Scissors"].sample
-    comp = Player.new("computer")
-    comp.picks = choice
-    comp
+    choice
   end
 
-  # start the server if ruby file executed directly
-  run! if app_file == $0
 end

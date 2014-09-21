@@ -32,3 +32,7 @@ end
 Then(/^I should be able to click "(.*?)" or click "(.*?)"$/) do |arg1, arg2|
 	visit '/outcome'
 end
+
+Then(/^I should be asked if I want to "(.*?)"$/) do |arg1|
+  click_button arg1
+end

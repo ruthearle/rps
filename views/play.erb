@@ -1,17 +1,23 @@
-<h2>Welcome</h2>
+<h2>Welcome <%= @player1.name%></h2>
 
-<h3>Are you ready to play <%= @player1 %>?</h2>
+<h2>Are you ready to play?</h2>
 
 
 
 <form action="/play" method="POST">
-	<button name="pick" value="Rock">Rock</button>
-	<button name="pick" value="Paper">Paper</button>
-	<button name="pick" value="Scissors">Scissors</button>
+	<button id="rock-pick" name="pick" value="Rock">Rock</button>
+	<button id="paper-pick" name="pick" value="Paper">Paper</button>
+	<button id="scissors-pick" name="pick" value="Scissors">Scissors</button>
 	<input type="hidden" name="name" value="<%= @player1 %>">
 </form>
 
 
 <% if @messages %>
 	<h4><%= @messages.last %></h4>
+  <form action="/new-game" method "GET">
+    <button id="play-again">Play new game?</button>
+  </form>
 <% end %>
+
+
+
