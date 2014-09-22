@@ -24,6 +24,8 @@ production environment to find out the average page
 loading time using **NewRelic's** interface. Write a little about what
 can be done with **NewRelic**.
 
+![](https://github.com/ruthearle/rockpaperscissors/blob/master/img/Screen%20Shot%202014-09-22%20at%2016.31.32.png)
+
 ####Bonus
 
 Make the application beautiful!
