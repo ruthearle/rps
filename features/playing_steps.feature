@@ -5,11 +5,12 @@ Feature: Playing
 
 Scenario: A player can register
 	Given I am on the homepage
-	When I click "New Game"
+	When I click on "New Game"
 	And I enter my name
-	Then I should be asked if I want to "Play Game?"
+	Then I should be asked if I want to play the game
 
 Scenario: A player is playing
-	Given I click on "Paper"
-	When I see RESULTS
+	Given I am ready to play the game
+	When I click on "Paper"
+	Then I see RESULTS
 	Then I should be able to click "Rock", "Paper", "Scissors" or click "Play new game?"
