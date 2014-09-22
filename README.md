@@ -18,10 +18,10 @@ deployment targets: staging and production. This means having two
 (origin, staging, production).
 
 #####Heroku - Staging
-![](http://staging-rps.herokuapp.com/)
+[Staging](http://staging-rps.herokuapp.com/)
 
 #####Heroku - Production
-![](http://rps-production.herokuapp.com/)
+[Production](http://rps-production.herokuapp.com/)
 
 ####Level Three
 
