@@ -1,7 +1,7 @@
 | [*Makers Academy*](http://www.makersacademy.com) | Week 5 |
 | ------------------------------------------------ | ------ |
 
-# Rock, Paper, Scissors
+# Rock, Paper, Scissors - Ruby
 
 ###The Challenge
 
