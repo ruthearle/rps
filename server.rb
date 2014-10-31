@@ -46,6 +46,7 @@ end
 
 
   def generate_computer
+
    comp = Player.new("computer")
    comp
   end
