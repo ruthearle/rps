@@ -1,7 +1,9 @@
 | [*Makers Academy*](http://www.makersacademy.com) | Week 5 |
 | ------------------------------------------------ | ------ |
 
-#The Challenge
+# Rock, Paper, Scissors
+
+###The Challenge
 
 Create a game of rock, paper, scissors that can be played in the browser using **Sinatra**.
 
