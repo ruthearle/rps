@@ -18,12 +18,20 @@ deployment targets: staging and production. This means having two
 **Heroku** apps that are being deployed to and three **GitHub** remotes
 (origin, staging, production).
 
+#####Heroku - Staging
+[Staging](http://staging-rps.herokuapp.com/)
+
+#####Heroku - Production
+[Production](http://rps-production.herokuapp.com/)
+
 ####Level Three
 
 After deploying to **Heroku**, add **NewRelic** add-on to the
 production environment to find out the average page
 loading time using **NewRelic's** interface. Write a little about what
 can be done with **NewRelic**.
+
+![](https://github.com/ruthearle/rockpaperscissors/blob/master/img/Screen%20Shot%202014-09-22%20at%2016.31.32.png)
 
 ####Bonus
 
